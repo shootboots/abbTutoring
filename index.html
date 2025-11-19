@@ -1,23 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta property="og:title" content="ABB Tutoring | Selective, HSC, IB Tutoring" />
-  <meta property="og:description" content="Tutoring by top achievers: IB 45, ATAR 99.95, Olympiad-level instructors." />
-  <meta property="og:image" content="https://abbtutoring.org/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:url" content="https://abbtutoring.org" />
-  <meta property="og:type" content="website" />
+  <meta charset="UTF-8" />
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ABB Tutoring | Selective, HSC, IB" />
-  <meta name="twitter:description" content="Tutoring by top achievers: IB 45, ATAR 99.95, Olympiad." />
-  <meta name="twitter:image" content="https://abbtutoring.org/og-image.png" />
-
-
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/favicon.png" />
-  <meta charset="UTF-8" />
 
   <!-- Primary SEO -->
   <title>ABB Tutoring | Selective, HSC and IB Tutoring by Top Achievers</title>
@@ -40,8 +28,9 @@
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://abbtutoring.org/" />
-  <!-- Replace this image URL once you have an og image asset -->
   <meta property="og:image" content="https://abbtutoring.org/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -1060,7 +1049,6 @@
         <!-- Alex Xu -->
         <article class="tutor-row">
           <div class="tutor-avatar">
-            <!-- <img src="images/tutors/alex-xu.jpg" alt="Alex Xu" style="width:100%;height:100%;object-fit:cover;" /> -->
             AX
           </div>
           <div class="tutor-main">
@@ -1099,7 +1087,6 @@
         <!-- Eamon Jia -->
         <article class="tutor-row">
           <div class="tutor-avatar">
-            <!-- <img src="images/tutors/eamon-jia.jpg" alt="Eamon Jia" style="width:100%;height:100%;object-fit:cover;" /> -->
             EJ
           </div>
           <div class="tutor-main">
@@ -1142,7 +1129,6 @@
         <!-- Seb Wong -->
         <article class="tutor-row">
           <div class="tutor-avatar">
-            <!-- <img src="images/tutors/seb-wong.jpg" alt="Seb Wong" style="width:100%;height:100%;object-fit:cover;" /> -->
             SW
           </div>
           <div class="tutor-main">
@@ -1177,7 +1163,6 @@
         <!-- Marcus Ke -->
         <article class="tutor-row">
           <div class="tutor-avatar">
-            <!-- <img src="images/tutors/marcus-ke.jpg" alt="Marcus Ke" style="width:100%;height:100%;object-fit:cover;" /> -->
             MK
           </div>
           <div class="tutor-main">
@@ -1212,7 +1197,6 @@
         <!-- Michael Zhou -->
         <article class="tutor-row">
           <div class="tutor-avatar">
-            <!-- <img src="images/tutors/michael-zhou.jpg" alt="Michael Zhou" style="width:100%;height:100%;object-fit:cover;" /> -->
             MZ
           </div>
           <div class="tutor-main">
@@ -1286,22 +1270,22 @@
         </div>
 
         <div class="consult-card">
-          <form>
+          <form id="consultation-form">
             <div class="form-row">
               <div class="field-group">
                 <label for="parent-name">Parent or guardian name</label>
-                <input type="text" id="parent-name" name="parent-name" placeholder="Full name" />
+                <input type="text" id="parent-name" name="parentName" placeholder="Full name" required />
               </div>
               <div class="field-group">
                 <label for="student-name">Student name</label>
-                <input type="text" id="student-name" name="student-name" placeholder="First name" />
+                <input type="text" id="student-name" name="studentName" placeholder="First name" required />
               </div>
             </div>
 
             <div class="form-row">
               <div class="field-group">
                 <label for="year-level">Year level</label>
-                <select id="year-level" name="year-level">
+                <select id="year-level" name="grade" required>
                   <option value="">Select year level</option>
                   <option>Year 3</option>
                   <option>Year 4</option>
@@ -1317,7 +1301,7 @@
               </div>
               <div class="field-group">
                 <label for="pathway">Exam pathway</label>
-                <select id="pathway" name="pathway">
+                <select id="pathway" name="examPathway" required>
                   <option value="">Choose pathway</option>
                   <option>Selective exam</option>
                   <option>HSC</option>
@@ -1329,17 +1313,28 @@
 
             <div class="field-group">
               <label for="subjects">Subjects or areas</label>
-              <input type="text" id="subjects" name="subjects" placeholder="For example: IB Biology HL, English, CAS and TOK" />
+              <input
+                type="text"
+                id="subjects"
+                name="subjects"
+                placeholder="For example: IB Biology HL, English, CAS and TOK"
+              />
             </div>
 
             <div class="field-group">
               <label for="contact-email">Email</label>
-              <input type="email" id="contact-email" name="contact-email" placeholder="you@example.com" />
+              <input
+                type="email"
+                id="contact-email"
+                name="contactEmail"
+                placeholder="you@example.com"
+                required
+              />
             </div>
 
             <div class="field-group">
               <label for="contact-phone">Phone</label>
-              <input type="tel" id="contact-phone" name="contact-phone" placeholder="Mobile number" />
+              <input type="tel" id="contact-phone" name="phone" placeholder="Mobile number" />
               <div class="form-helper">
                 We use this number to confirm the consultation time.
               </div>
@@ -1347,12 +1342,18 @@
 
             <div class="field-group">
               <label for="notes">Any key information</label>
-              <textarea id="notes" name="notes" placeholder="Upcoming exams, current school, main concerns."></textarea>
+              <textarea
+                id="notes"
+                name="notes"
+                placeholder="Upcoming exams, current school, main concerns."
+              ></textarea>
             </div>
 
             <div class="form-actions">
               <button type="submit" class="btn btn-primary">Submit enquiry</button>
-              <span class="form-helper">We reply within one business day.</span>
+              <span class="form-helper" id="consultation-status">
+                We reply within one business day.
+              </span>
             </div>
           </form>
         </div>
@@ -1374,12 +1375,15 @@
 </div>
 
 <script>
+  // Navigation toggle
   const header = document.querySelector("header");
   const toggle = document.querySelector(".nav-toggle");
 
-  toggle.addEventListener("click", () => {
-    header.classList.toggle("nav-open");
-  });
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      header.classList.toggle("nav-open");
+    });
+  }
 
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
@@ -1387,7 +1391,68 @@
     });
   });
 
+  // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Consultation form handling
+  const form = document.getElementById("consultation-form");
+  const statusEl = document.getElementById("consultation-status");
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      if (statusEl) {
+        statusEl.textContent = "Sending...";
+        statusEl.style.color = "#6b7280"; // muted
+      }
+
+      const formData = new FormData(form);
+
+      const subjects = formData.get("subjects") || "";
+      const notes = formData.get("notes") || "";
+      const combinedMessage = [subjects, notes].filter(Boolean).join("\n\n");
+
+      const payload = {
+        parentName: formData.get("parentName"),
+        studentName: formData.get("studentName"),
+        contactEmail: formData.get("contactEmail"),
+        phone: formData.get("phone"),
+        grade: formData.get("grade"),
+        examPathway: formData.get("examPathway"),
+        message: combinedMessage
+      };
+
+      try {
+        const res = await fetch("/api/consultation", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok && data.success) {
+          if (statusEl) {
+            statusEl.textContent = "Thank you — we have received your request and will contact you shortly.";
+            statusEl.style.color = "#16a34a"; // green
+          }
+          form.reset();
+        } else {
+          if (statusEl) {
+            statusEl.textContent = "Sorry, something went wrong. Please try again or email us directly.";
+            statusEl.style.color = "#dc2626"; // red
+          }
+        }
+      } catch (err) {
+        console.error(err);
+        if (statusEl) {
+          statusEl.textContent = "Network error. Please check your connection and try again.";
+          statusEl.style.color = "#dc2626"; // red
+        }
+      }
+    });
+  }
 </script>
 </body>
 </html>
