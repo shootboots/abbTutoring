@@ -45,7 +45,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         from: "ABB Tutoring <noreply@abbtutoring.org>",
-        to: "YOUR_REAL_EMAIL_HERE@gmail.com", // ← change to your inbox
+        to: "abb.tutoring1@gmail.com", // ← change to your inbox
         subject: "New ABB Tutoring consultation request",
         html: adminHtml,
       }),
