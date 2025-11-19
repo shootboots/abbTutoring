@@ -48,7 +48,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         from: "ABB Tutoring <noreply@abbtutoring.org>",
-        to: "youremail@example.com", // change this to your real inbox
+        to: "abb.tutoring1@example.com", // change this to your real inbox
         subject: "ABB Tutoring waitlist registration",
         html: adminHtml
       })
