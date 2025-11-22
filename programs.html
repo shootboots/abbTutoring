@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Overview of ABB Tutoring programs for Selective exams, HSC and IB Diploma. Limited intake by waitlist." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="apple-touch-icon" href="/favicon.png">
-  <meta name="theme-color" content="#8e4ad1">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+
   <style>
     :root {
       --bg: #f3f4f6;
@@ -64,11 +66,16 @@
     }
 
     section {
-      padding: 80px 0;
+      padding: 70px 0; /* was 80px, reduced slightly */
     }
 
     section:first-of-type {
       padding-top: 120px;
+    }
+
+    /* thin horizontal bar between sections */
+    section + section {
+      border-top: 1px solid #e5e7eb;
     }
 
     .section-heading {
@@ -357,6 +364,174 @@
       background: var(--accent);
     }
 
+    .notice {
+      margin-bottom: 20px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid #fee2e2;
+      background: #fef2f2;
+      font-size: 0.9rem;
+      color: #7f1d1d;
+    }
+
+    .notice strong {
+      font-weight: 600;
+    }
+
+    /* Pricing */
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .pricing-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pricing-pill {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #6b7280;
+    }
+
+    .pricing-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+    }
+
+    .pricing-amount {
+      font-size: 1.3rem;
+      font-weight: 800;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 2px 0;
+    }
+
+    .pricing-note {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+    }
+
+    .pricing-list {
+      list-style: none;
+      font-size: 0.86rem;
+      color: var(--text-main);
+      margin-top: 4px;
+      display: grid;
+      gap: 3px;
+    }
+
+    .pricing-list li {
+      display: flex;
+      gap: 7px;
+      align-items: flex-start;
+    }
+
+    .pricing-bullet {
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--accent);
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    .pricing-footer-text {
+      margin-top: 14px;
+      font-size: 0.84rem;
+      color: var(--text-soft);
+      max-width: 620px;
+    }
+
+    /* Testimonials */
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 22px;
+    }
+
+    .testimonial-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.9rem;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .testimonial-quote {
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    .testimonial-meta {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    /* How lessons work */
+
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .pipeline-step {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      padding: 16px 16px 14px;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.88rem;
+      color: var(--text-main);
+    }
+
+    .pipeline-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background-image: var(--accent-gradient);
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .pipeline-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .pipeline-desc {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
     footer {
       border-top: 1px solid #e5e7eb;
       padding: 18px 20px 26px;
@@ -390,26 +565,30 @@
       color: var(--text-main);
     }
 
-    .notice {
-      margin-bottom: 20px;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid #fee2e2;
-      background: #fef2f2;
-      font-size: 0.9rem;
-      color: #7f1d1d;
-    }
-
-    .notice strong {
-      font-weight: 600;
+    @media (max-width: 1120px) {
+      .pipeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 960px) {
       section {
-        padding: 64px 0;
+        padding: 60px 0;
       }
 
       .exam-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .pricing-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .testimonial-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .pipeline {
         grid-template-columns: minmax(0, 1fr);
       }
     }
@@ -468,20 +647,22 @@
         <span></span>
       </button>
 
-    <nav>
+      <nav>
         <div class="nav-links">
-            <a href="tutors.html">Tutors</a>
-            <a href="programs.html">Programs</a>
+          <a href="/">Home</a>
+          <a href="tutors.html">Tutors</a>
+          <a href="programs.html">Programs</a>
         </div>
         <div class="nav-cta">
-            <a href="/#consult" class="btn btn-primary">Join waitlist</a>
+          <a href="/#consult" class="btn btn-primary">Join waitlist</a>
         </div>
-    </nav>
+      </nav>
 
     </div>
   </header>
 
   <main>
+    <!-- Programs overview -->
     <section aria-labelledby="programs-heading">
       <div class="section-header-row">
         <div>
@@ -581,13 +762,204 @@
         </article>
       </div>
     </section>
+
+    <!-- Pricing overview -->
+    <section aria-labelledby="pricing-heading">
+      <div class="section-header-row">
+        <div>
+          <h2 id="pricing-heading" class="section-heading">Pricing overview</h2>
+          <p class="section-subtitle">
+            ABB is a boutique service. Families invest in a small team of tutors with national level results.  
+            Full pricing is confirmed after we understand your subjects and goals.
+          </p>
+        </div>
+        <div>
+          <a href="/#consult" class="btn btn-primary">Discuss pricing</a>
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <div class="pricing-pill">One student</div>
+          <div class="pricing-title">Premium one to one</div>
+          <div class="pricing-amount">From $110 per hour</div>
+          <p class="pricing-note">
+            For most Selective, HSC Advanced and IB SL subjects.
+          </p>
+          <ul class="pricing-list">
+            <li>
+              <span class="pricing-bullet"></span>
+              <span>Weekly one to one lesson with a named tutor.</span>
+            </li>
+            <li>
+              <span class="pricing-bullet"></span>
+              <span>Homework and past paper work set between lessons.</span>
+            </li>
+            <li>
+              <span class="pricing-bullet"></span>
+              <span>Periodic check in with parents on progress.</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="pricing-card">
+          <div class="pricing-pill">Specialist</div>
+          <div class="pricing-title">Elite subjects</div>
+          <div class="pricing-amount">From $140 per hour</div>
+          <p class="pricing-note">
+            For IB HL, Extension Two, high competition level and last term exam preparation.
+          </p>
+          <ul class="pricing-list">
+            <li>
+              <span class="pricing-bullet"></span>
+              <span>Lessons designed by tutors with Olympiad and competition success.</span>
+            </li>
+            <li>
+              <span class="pricing-bullet"></span>
+              <span>Tailored past paper sets and exam simulations.</span>
+            </li>
+            <li>
+              <span class="pricing-bullet"></span>
+              <span>Higher touch feedback for students targeting top bands or IB 7.</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="pricing-card">
+          <div class="pricing-pill">Small group</div>
+          <div class="pricing-title">Paired and small groups</div>
+          <div class="pricing-amount">From $45 per student</div>
+          <p class="pricing-note">
+            For students who learn well with a friend at a similar level.
+          </p>
+          <ul class="pricing-list">
+            <li>
+              <span class="pricing-bullet"></span>
+              <span>Very small groups with matched year level and pathway.</span>
+            </li>
+            <li>
+              <span class="pricing-bullet"></span>
+              <span>Shared resources and exam packs for the whole group.</span>
+            </li>
+            <li>
+              <span class="pricing-bullet"></span>
+              <span>Places limited to protect lesson pace and attention.</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="pricing-footer-text">
+        Exact fees depend on subject, year level and tutor availability.  
+        We confirm pricing in writing after the initial consultation so families know the full commitment before lessons begin.
+      </p>
+    </section>
+
+    <!-- Testimonials -->
+    <section aria-labelledby="testimonials-heading">
+      <div class="section-header-row">
+        <div>
+          <h2 id="testimonials-heading" class="section-heading">Family feedback</h2>
+          <p class="section-subtitle">
+            Before ABB formally opened its first cohort, our tutors worked privately with a small group of families.  
+            Here is some of the feedback they received.
+          </p>
+        </div>
+      </div>
+
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-quote">
+            “Our son went from barely passing internal assessments to placing near the top of his class by trials.  
+            The lessons were structured and clear and we always knew what he needed to work on next.”
+          </div>
+          <div class="testimonial-meta">
+            Year 12 parent, HSC Mathematics and Physics
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-quote">
+            “The tutor understood the IB expectations better than anyone we had spoken to.  
+            She learned how to plan her essays and papers properly instead of cramming at the end.”
+          </div>
+          <div class="testimonial-meta">
+            Year 11 parent, IB Biology and English
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-quote">
+            “Our daughter felt seen. The tutor did not just set harder problems, he showed her how strong students think through questions.  
+            That confidence is what changed her results.”
+          </div>
+          <div class="testimonial-meta">
+            Year 6 parent, Selective and scholarship preparation
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- How lessons work -->
+    <section aria-labelledby="process-heading">
+      <div class="section-header-row">
+        <div>
+          <h2 id="process-heading" class="section-heading">How lessons work</h2>
+          <p class="section-subtitle">
+            Each program follows a simple process so that students know what to expect and parents can see progress over the term.
+          </p>
+        </div>
+        <div>
+          <a href="/#consult" class="btn btn-primary">Start the process</a>
+        </div>
+      </div>
+
+      <div class="pipeline">
+        <article class="pipeline-step">
+          <div class="pipeline-badge">1</div>
+          <div class="pipeline-title">Consultation and placement</div>
+          <p class="pipeline-desc">
+            We speak with parents about goals, current school results and exam timelines.  
+            Students are matched with a tutor who suits their pathway and temperament.
+          </p>
+        </article>
+
+        <article class="pipeline-step">
+          <div class="pipeline-badge">2</div>
+          <div class="pipeline-title">Diagnostic and plan</div>
+          <p class="pipeline-desc">
+            The first lesson includes a short diagnostic task.  
+            The tutor then builds a simple term plan that balances content, exam skills and past papers.
+          </p>
+        </article>
+
+        <article class="pipeline-step">
+          <div class="pipeline-badge">3</div>
+          <div class="pipeline-title">Weekly lessons and homework</div>
+          <p class="pipeline-desc">
+            Students attend regular lessons and complete targeted homework.  
+            Work is marked with specific feedback on method, not just final answers.
+          </p>
+        </article>
+
+        <article class="pipeline-step">
+          <div class="pipeline-badge">4</div>
+          <div class="pipeline-title">Review and adjust</div>
+          <p class="pipeline-desc">
+            After school assessments and exam blocks, the tutor reviews results with the family.  
+            The plan is updated to keep students on track for their next deadline.
+          </p>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="footer-inner">
       <div>© <span id="year"></span> ABB Tutoring · Aspire Beyond Boundaries</div>
       <div class="footer-nav">
-        <a href="/#tutors">Tutors</a>
+        <a href="/">Home</a>
+        <a href="tutors.html">Tutors</a>
         <a href="programs.html">Programs</a>
         <a href="/#consult">Waitlist</a>
       </div>
