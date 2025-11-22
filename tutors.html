@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ABB Tutoring | Tutor Team</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Meet the full ABB Tutoring team of high achieving tutors for Selective, HSC and IB students."
+  />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ABB Tutoring | Tutor Team" />
+  <meta property="og:description" content="Top ranked tutors for Selective, HSC and IB. View the full ABB team." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://abbtutoring.org/tutors.html" />
+  <meta property="og:image" content="https://abbtutoring.org/og-image.png" />
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+    <style>
+    :root {
+        --bg: #f3f4f6;
+        --bg-card: #ffffff;
+        --bg-soft: #f9fafb;
+
+        --accent: #8e4ad1;
+        --accent-soft: rgba(142, 74, 209, 0.12);
+        --accent-border: #e0c5fb;
+        --accent-strong: #e85363;
+        --accent-gradient: linear-gradient(135deg, #8e4ad1, #e85363);
+
+        --text-main: #111827;
+        --text-muted: #6b7280;
+        --text-soft: #9ca3af;
+        --border: #e5e7eb;
+        --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.08);
+        --radius-lg: 16px;
+        --radius-xl: 20px;
+        --radius-pill: 999px;
+        --nav-height: 74px;
+        --transition-fast: 0.18s ease;
+        --transition-med: 0.25s ease;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text-main);
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .page-shell {
+        min-height: 100vh;
+    }
+
+    main {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 20px 72px;
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    section:first-of-type {
+        padding-top: 120px;
+    }
+
+    .section-heading {
+        font-size: clamp(1.9rem, 3vw, 2.3rem);
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+        color: var(--text-muted);
+        max-width: 640px;
+        font-size: 0.95rem;
+    }
+
+    .section-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 24px;
+        margin-bottom: 24px;
+        flex-wrap: wrap;
+    }
+
+    /* Header */
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        backdrop-filter: blur(12px);
+        background: rgba(249, 250, 251, 0.96);
+        border-bottom: 1px solid rgba(209, 213, 219, 0.9);
+    }
+
+    .nav-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 14px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: var(--nav-height);
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .brand-mark {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background-image: var(--accent-gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 0.92rem;
+        color: #ffffff;
+        border: 0;
+    }
+
+    .brand-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .brand-name {
+        font-weight: 800;
+        font-size: 1.02rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    .brand-tagline {
+        font-size: 0.72rem;
+        color: var(--text-soft);
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 18px;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+    }
+
+    .nav-links a {
+        position: relative;
+        padding-bottom: 3px;
+        color: var(--text-muted);
+        transition: color var(--transition-fast);
+    }
+
+    .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        border-radius: 999px;
+        background: var(--accent);
+        transition: width var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+        color: var(--text-main);
+    }
+
+    .nav-links a:hover::after {
+        width: 18px;
+    }
+
+    .nav-cta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--radius-pill);
+        border: 1px solid transparent;
+        font-size: 0.86rem;
+        padding: 9px 18px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all var(--transition-med);
+        background: transparent;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+    }
+
+    .btn-primary {
+        background-image: var(--accent-gradient);
+        background-color: var(--accent);
+        color: #ffffff;
+        box-shadow: 0 8px 18px rgba(142, 74, 209, 0.35);
+    }
+
+    .btn-primary:hover {
+        box-shadow: 0 10px 24px rgba(142, 74, 209, 0.45);
+        transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+        border-color: #d1d5db;
+        color: var(--text-main);
+        background: #ffffff;
+    }
+
+    .btn-ghost:hover {
+        border-color: #9ca3af;
+        background: #f9fafb;
+    }
+
+    .nav-toggle {
+        display: none;
+        padding: 6px 8px;
+        border-radius: 999px;
+        border: 1px solid #d1d5db;
+        background: #ffffff;
+        cursor: pointer;
+    }
+
+    .nav-toggle span {
+        display: block;
+        width: 16px;
+        height: 2px;
+        background: #4b5563;
+        border-radius: 999px;
+        position: relative;
+    }
+
+    .nav-toggle span::before,
+    .nav-toggle span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 16px;
+        height: 2px;
+        background: #4b5563;
+        border-radius: 999px;
+        transition: transform var(--transition-fast), opacity var(--transition-fast);
+    }
+
+    .nav-toggle span::before {
+        top: -5px;
+    }
+
+    .nav-toggle span::after {
+        top: 5px;
+    }
+
+    .nav-open .nav-toggle span {
+        background: transparent;
+    }
+
+    .nav-open .nav-toggle span::before {
+        transform: translateY(5px) rotate(45deg);
+    }
+
+    .nav-open .nav-toggle span::after {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+
+    .nav-open .nav-links,
+    .nav-open .nav-cta {
+        display: flex;
+    }
+
+    /* Tutor list page */
+
+    .tutor-list-page {
+        display: grid;
+        gap: 22px;
+        margin-top: 32px;
+    }
+
+    .tutor-card-page {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 2.4fr);
+        gap: 20px;
+        background: var(--bg-card);
+        padding: 20px;
+        border-radius: var(--radius-xl);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-soft);
+    }
+
+    .tutor-photo-page {
+        border-radius: 18px;
+        background: radial-gradient(circle at top left, rgba(142, 74, 209, 0.16), rgba(232, 83, 99, 0.16));
+        border: 1px dashed var(--accent-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .tutor-photo-page-inner {
+        width: 100%;
+        max-width: 200px;
+        aspect-ratio: 4 / 5;
+        border-radius: 16px;
+        background: #e5e7eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: #4b5563;
+        overflow: hidden;
+    }
+
+    /* actual tutor image inside the photo block */
+    .tutor-photo-page-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+        display: block;
+    }
+
+    .tutor-photo-page-caption {
+        font-size: 0.8rem;
+        color: var(--text-soft);
+    }
+
+    .tutor-content-page {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .tutor-header-line-page {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: baseline;
+    }
+
+    .tutor-name-page {
+        font-size: 1.2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+
+    .tutor-tags-page {
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--text-soft);
+    }
+
+    .tutor-subjects-page {
+        font-size: 0.96rem;
+        font-weight: 600;
+        color: var(--accent-strong);
+    }
+
+    .tutor-quote-page {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin-top: 4px;
+    }
+
+    .tutor-list-label-page {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--text-soft);
+        margin-top: 6px;
+    }
+
+    .tutor-achievements-page {
+        list-style: none;
+        margin-top: 6px;
+        font-size: 0.9rem;
+        color: var(--text-main);
+        display: grid;
+        gap: 4px;
+    }
+
+    /* student results block under a tutor card (for Seb and others) */
+
+    .tutor-results-page {
+        margin-top: 16px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border);
+    }
+
+    .tutor-results-heading {
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--text-soft);
+        margin-bottom: 6px;
+    }
+
+    .tutor-results-layout {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .tutor-results-graphic {
+        flex-shrink: 0;
+    }
+
+    .results-circle {
+        width: 72px;
+        height: 72px;
+        border-radius: 999px;
+        background: conic-gradient(
+        var(--accent) 0 88%,
+        #e5e7eb 88% 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+    }
+
+    .results-circle-inner {
+        width: 54px;
+        height: 54px;
+        border-radius: 999px;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--text-main);
+    }
+
+    .results-circle-inner span {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: var(--text-muted);
+        margin-top: 2px;
+    }
+
+    .tutor-results-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 0.86rem;
+        color: var(--text-main);
+        display: grid;
+        gap: 3px;
+        max-width: 420px;
+    }
+
+    .tutor-footer-page {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+        color: var(--text-soft);
+    }
+
+    .tutor-note-page {
+        max-width: 260px;
+    }
+
+    /* Footer */
+
+    footer {
+        border-top: 1px solid #e5e7eb;
+        padding: 18px 20px 26px;
+        font-size: 0.8rem;
+        color: var(--text-soft);
+        background: #f9fafb;
+        margin-top: 32px;
+    }
+
+    .footer-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .footer-nav {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+        color: var(--text-soft);
+    }
+
+    .footer-nav a:hover {
+        color: var(--text-main);
+    }
+
+    @media (max-width: 960px) {
+        section {
+        padding: 64px 0;
+        }
+
+        .tutor-card-page {
+        grid-template-columns: minmax(0, 1fr);
+        }
+
+        .tutor-photo-page-inner {
+        max-width: 180px;
+        }
+
+        .tutor-results-layout {
+        align-items: flex-start;
+        }
+    }
+
+    @media (max-width: 780px) {
+        .nav-links,
+        .nav-cta {
+        display: none;
+        position: absolute;
+        top: var(--nav-height);
+        right: 20px;
+        left: 20px;
+        padding: 14px 14px 12px;
+        border-radius: 14px;
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        flex-direction: column;
+        gap: 12px;
+        box-shadow: var(--shadow-soft);
+        }
+
+        .nav-links a::after {
+        display: none;
+        }
+
+        .nav-cta {
+        position: static;
+        }
+
+        .nav-toggle {
+        display: inline-flex;
+        }
+    }
+
+    @media (max-width: 560px) {
+        main {
+        padding-inline: 16px;
+        }
+    }
+    </style>
+
+</head>
+
+<body>
+<div class="page-shell">
+  <header id="top">
+    <div class="nav-inner">
+      <a href="index.html#top" class="brand">
+        <div class="brand-mark">ABB</div>
+        <div class="brand-text">
+          <div class="brand-name">ABB Tutoring</div>
+          <div class="brand-tagline">Aspire Beyond Boundaries</div>
+        </div>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+
+      <nav>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="tutors.html">Tutors</a>
+          <a href="programs.html">Programs</a>
+        </div>
+        <div class="nav-cta">
+          <a href="index.html#consult" class="btn btn-primary">Join waitlist</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="tutor-team-heading">
+      <div class="section-header-row">
+        <div>
+          <h1 id="tutor-team-heading" class="section-heading">Full tutor team</h1>
+          <p class="section-subtitle">
+            Every ABB tutor is selected for clear exam performance in their own program.  
+            You can indicate tutor preferences when you join the waitlist, and we will match based on fit and availability.
+          </p>
+        </div>
+        <div>
+          <a href="index.html#consult" class="btn btn-primary">Join waitlist</a>
+        </div>
+      </div>
+
+      <div class="tutor-list-page">
+        <!-- Alex Xu -->
+        <article class="tutor-card-page">
+          <div class="tutor-photo-page">
+            <div class="tutor-photo-page-inner">
+              <img src="image.png" alt="Eamon Jia" class="tutor-photo-page-img" />
+            </div>
+          </div>
+          <div class="tutor-content-page">
+            <div class="tutor-header-line-page">
+              <div class="tutor-name-page">Alex Xu</div>
+              <div class="tutor-tags-page">IB Biology HL · IB English HL</div>
+            </div>
+            <div class="tutor-subjects-page">
+              Teaches: IB Biology HL · IB English Literature HL
+            </div>
+            <div class="tutor-quote-page">
+              “My goal is to give students a clear plan that turns panic into predictable marks.”
+            </div>
+            <div class="tutor-list-label-page">Key achievements</div>
+            <ul class="tutor-achievements-page">
+              <li>IB predicted 45 (7 in every subject).</li>
+              <li>Dux of Cohort 2024/2025</li>
+              <li>Selective Score 260+</li>
+              <li>Full Academic Scholarship to Top Private School</li>
+              <li>Ranked 1st in English Literature HL, Biology HL, Geography SL, Physics SL</li>
+              <li>Selected for ANU Australian Biology Olympiad Summer School, top 24 in Australia.</li>
+              <li>Australian Biology Olympiad Top 24 (High Distinction)</li>
+              <li>Melbourne University National Math Competition Winner 2022/2024</li>
+              <li>Australian Big Science Competition High Distinction 2021/2022/2023/2024</li>
+              <li>Very limited spaces due to commitments in research and competitions.</li>
+            </ul>
+
+            <div class="tutor-results-page">
+            <div class="tutor-results-heading">Student results snapshot</div>
+            <div class="tutor-results-layout">
+                <div class="tutor-results-graphic">
+                <div class="results-circle">
+                    <div class="results-circle-inner">
+                    90%
+                    </div>
+                </div>
+                </div>
+                <ul class="tutor-results-list">
+                <li>Around 90% of IB Biology HL students finish with 6 or 7.</li>
+                <li>In IB English, many students move from borderline passes to stable level 6 essays, especially in Paper 1 and Paper 2.</li>
+                <li>Several students have been shortlisted for science extension programs</li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="tutor-footer-page">
+              <div class="tutor-note-page">
+                Best suited to IB Biology and English students aiming for top band outcomes.
+              </div>
+              <a href="index.html#consult" class="btn btn-ghost">Request Alex</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Eamon Jia -->
+        <article class="tutor-card-page">
+          <div class="tutor-photo-page">
+            <div class="tutor-photo-page-inner">
+              <img src="eamontutor.jpeg" alt="Eamon Jia" class="tutor-photo-page-img" />
+            </div>
+          </div>
+          <div class="tutor-content-page">
+            <div class="tutor-header-line-page">
+              <div class="tutor-name-page">Eamon Jia</div>
+              <div class="tutor-tags-page">IB Physics HL · IB Maths AA HL</div>
+            </div>
+            <div class="tutor-subjects-page">
+              Teaches: IB Physics HL · IB Mathematics AA HL
+            </div>
+            <div class="tutor-quote-page">
+              “Strong exam results come from method, not guessing. I teach students how to think like markers.”
+            </div>
+            <div class="tutor-list-label-page">Key achievements</div>
+            <ul class="tutor-achievements-page">
+              <li>IB predicted 45 (7 in every subject).</li>
+              <li>Dux of Cohort 2022/2023/2024/2025</li>
+              <li>Selective Score 260+</li>
+              <li>Full Academic Scholarship to Top Private School</li>
+              <li>Ranked 1st in Physics HL, Maths AAHL, Chinese SL, Economics SL</li>
+              <li>Selected for AMOC School of Excellence National Camp.</li>
+              <li>Physics Olympiad High Distinction 2023/2025.</li>
+              <li>AMC NSW 1st place 2024</li>
+              <li>UNSW Maths Competition 2nd place 2023</li>
+              <li>Spaces each term are capped to keep lesson preparation time high.</li>
+            </ul>
+
+            <div class="tutor-results-page">
+            <div class="tutor-results-heading">Student results snapshot</div>
+            <div class="tutor-results-layout">
+                <div class="tutor-results-graphic">
+                <div class="results-circle">
+                    <div class="results-circle-inner">
+                    91%
+                    </div>
+                </div>
+                </div>
+                <ul class="tutor-results-list">
+                <li>Roughly 91% of Mathematics AA HL students achieve 6 or 7.</li>
+                <li>Large number of Physics stduents move from lost in Paper 2 to confidently compelting ful mark extended problems.</li>
+                <li>Several students gone on to math extension streams, national training programs or school honours classes.</li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="tutor-footer-page">
+              <div class="tutor-note-page">
+                Best suited to higher level Physics and Maths students with ambitious goals.
+              </div>
+              <a href="index.html#consult" class="btn btn-ghost">Request Eamon</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Seb Wong -->
+        <article class="tutor-card-page">
+        <div class="tutor-photo-page">
+            <div class="tutor-photo-page-inner">
+            <img src="sebTutor.jpg" alt="Seb Wong" class="tutor-photo-page-img" />
+            </div>
+        </div>
+
+        <div class="tutor-content-page">
+            <div class="tutor-header-line-page">
+            <div class="tutor-name-page">Seb Wong</div>
+            <div class="tutor-tags-page">HSC Maths Ext 1 and 2</div>
+            </div>
+
+            <div class="tutor-subjects-page">
+            Teaches: HSC Mathematics Extension One and Two
+            </div>
+
+            <div class="tutor-quote-page">
+            “I show students exactly how top trial scripts look and train them to write at that standard every week.”
+            </div>
+
+            <div class="tutor-list-label-page">Key achievements</div>
+            <ul class="tutor-achievements-page">
+            <li>ATAR predicted 99.95.</li>
+            <li>Ranked 1st in Ext 1, Ext 2, Physics and Chemistry in school assessments.</li>
+            <li>Ranked 1st in HSC trial exams for Ext 1, Ext 2 and Physics.</li>
+            <li>Winner of UNSW Integration Bee.</li>
+            <li>High distinction level performance in the Melbourne University Mathematics and Statistics Research Competition.</li>
+            <li>Strong results in UNSW Mathematics Competition and related contests.</li>
+            <li>Distinction in Australian Physics Olympiad.</li>
+            <li>Invited to Cambridge Mathematics interview.</li>
+            <li>Provides structured term plans for year eleven and twelve students.</li>
+            <li>Focus on steady band six performance, not only last week revision.</li>
+            </ul>
+
+            <!-- Student results graphic -->
+            <div class="tutor-results-page">
+            <div class="tutor-results-heading">Student results snapshot</div>
+            <div class="tutor-results-layout">
+                <div class="tutor-results-graphic">
+                <div class="results-circle">
+                    <div class="results-circle-inner">
+                    88%
+                    </div>
+                </div>
+                </div>
+                <ul class="tutor-results-list">
+                <li>About 88% of Ext 2 students achieve band E4.</li>
+                <li>Most Ext 1 and Advanced Maths students reach band 6 by the HSC.</li>
+                <li>Many students improve by 15 to 20 raw marks between first school assessment and trials.</li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="tutor-footer-page">
+            <div class="tutor-note-page">
+                Best suited to senior HSC students with ambitious Mathematics and science goals.
+            </div>
+            <a href="index.html#consult" class="btn btn-ghost">Request Seb</a>
+            </div>
+        </div>
+        </article>
+
+
+        <!-- Marcus Ke -->
+        <article class="tutor-card-page">
+          <div class="tutor-photo-page">
+            <div class="tutor-photo-page-inner">
+            <img src="marcusKe.png" alt="Eamon Jia" class="tutor-photo-page-img" />
+            </div>
+          </div>
+          <div class="tutor-content-page">
+            <div class="tutor-header-line-page">
+              <div class="tutor-name-page">Marcus Ke</div>
+              <div class="tutor-tags-page">IB English · Humanities · Maths AA HL</div>
+            </div>
+            <div class="tutor-subjects-page">
+              Teaches: IB English · Humanities subjects · general academic support
+            </div>
+            <div class="tutor-quote-page">
+              “I want students to walk into trials feeling that paper style questions are familiar work.”
+            </div>
+            <div class="tutor-list-label-page">Key achievements</div>
+            <ul class="tutor-achievements-page">
+              <li>IB Predicted 44.</li>
+              <li>Selective Score 260+</li>
+              <li>Full Academic Scholarship to Top Private School</li>
+              <li>Ranked 1st in Maths AAHL and Physics SL.</li>
+              <li>AMC High Distinction/Prize 2021/2022/2023/2024</li>
+              <li>Model United Nations Assembly (MUNA) - Representation for Rotary 0675</li>
+              <li>UN Youth Voice Public Speaking Regional Finalist 2023</li>
+              <li>Ethics Olympiad 5th Internationals 2023</li>
+              <li>Ethics Olympiad 7th Internationals 2022</li>
+              <li>Limited spaces due to heavy demand from year 11 and 12 students.</li>
+            </ul>
+
+            <div class="tutor-results-page">
+            <div class="tutor-results-heading">Student results snapshot</div>
+            <div class="tutor-results-layout">
+                <div class="tutor-results-graphic">
+                <div class="results-circle">
+                    <div class="results-circle-inner">
+                    80%
+                    </div>
+                </div>
+                </div>
+                <ul class="tutor-results-list">
+                <li>80% of English students climb one full grade band in school assessments within a term.</li>
+                <li>Marcus has particular success with students who dislike writing, helping them build repeatable essay templates.</li>
+                <li>Improve raw mark by 5-6 marks in humanity related assessments</li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="tutor-footer-page">
+              <div class="tutor-note-page">
+                Well suited to students who need steady support across multiple subjects.
+              </div>
+              <a href="index.html#consult" class="btn btn-ghost">Request Marcus</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Michael Zhou -->
+        <article class="tutor-card-page">
+          <div class="tutor-photo-page">
+            <div class="tutor-photo-page-inner">
+              Photo of Michael
+            </div>
+          </div>
+          <div class="tutor-content-page">
+            <div class="tutor-header-line-page">
+              <div class="tutor-name-page">Michael Zhou</div>
+              <div class="tutor-tags-page">IB core · TOK · CAS · EE</div>
+            </div>
+            <div class="tutor-subjects-page">
+              Teaches: Theory of Knowledge · CAS planning and reflections · Extended Essay structure and drafting
+            </div>
+            <div class="tutor-quote-page">
+              “The IB core is manageable once students know exactly what each part expects.”
+            </div>
+            <div class="tutor-list-label-page">Key strengths</div>
+            <ul class="tutor-achievements-page">
+              <li>Deep familiarity with IB core assessment criteria.</li>
+              <li>Experience in planning CAS projects from start to completion.</li>
+              <li>Helps students structure TOK essays and exhibitions within IB academic honesty rules.</li>
+              <li>Guides students in breaking the Extended Essay into clear phases.</li>
+              <li>Focus on simple templates and checklists that reduce stress.</li>
+              <li>Works closely with subject tutors for consistent messaging across a student’s program.</li>
+            </ul>
+            <div class="tutor-results-page">
+            <div class="tutor-results-heading">Student results snapshot</div>
+            <div class="tutor-results-layout">
+                <div class="tutor-results-graphic">
+                <div class="results-circle">
+                    <div class="results-circle-inner">
+                    90%
+                    </div>
+                </div>
+                </div>
+                <ul class="tutor-results-list">
+                <li>Nearly 90% of TOK students achieve 8 or above on their final essay.</li>
+                <li>Over 85%+ students achieve overall 3/3 core IB points.</li>
+                <li>Across TOK, CAS, and EE, Michael's students report a major drop in core related stress.</li>
+                </ul>
+            </div>
+            </div>
+            <div class="tutor-footer-page">
+              <div class="tutor-note-page">
+                Best for IB students who feel lost in CAS, TOK or EE and want clear guidance.
+              </div>
+              <a href="index.html#consult" class="btn btn-ghost">Request Michael</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> ABB Tutoring · Aspire Beyond Boundaries</div>
+      <div class="footer-nav">
+        <a href="index.html#top">Home</a>
+        <a href="tutors.html">Tutors</a>
+        <a href="programs.html">Programs</a>
+        <a href="index.html#consult">Waitlist</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  const header = document.querySelector("header");
+  const toggle = document.querySelector(".nav-toggle");
+
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      header.classList.toggle("nav-open");
+    });
+  }
+
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      header.classList.remove("nav-open");
+    });
+  });
+
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+</script>
+</body>
+</html>

@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <!-- Basic social preview -->
-  <meta property="og:title" content="ABB Tutoring | Selective, HSC, IB Tutoring" />
-  <meta property="og:description" content="High performance tutoring by top achievers. Limited places for our 2025 intake. Join the waitlist." />
+  <meta charset="UTF-8" />
+  <meta property="og:title" content="ABB Tutoring Waitlist | Selective, HSC and IB Tutoring" />
+  <meta property="og:description" content="High performance tutoring by top achievers. Limited places for our next intake. Join the waitlist." />
   <meta property="og:image" content="https://abbtutoring.org/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -17,39 +18,19 @@
 
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/favicon.png" />
-  <meta charset="UTF-8" />
 
   <!-- Primary SEO -->
   <title>ABB Tutoring Waitlist | Selective, HSC and IB Tutoring</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="ABB Tutoring is currently operating at full capacity. Join the waitlist to secure priority access to our next intake for Selective, HSC and IB tutoring in Sydney."
+    content="ABB Tutoring is currently operating at full capacity. Join the waitlist to secure priority access to our next intake for Selective, HSC and IB tutoring in Sydney. Limited places, priority for serious exam goals."
   />
   <meta
     name="keywords"
     content="Selective tutoring, HSC tutoring, IB tutoring, Sydney tutoring, ABB Tutoring, high achiever tutoring, top tutors Sydney, waitlist tutoring"
   />
   <link rel="canonical" href="https://abbtutoring.org/" />
-
-  <!-- Open Graph / Social (main set) -->
-  <meta property="og:title" content="ABB Tutoring Waitlist | Selective, HSC and IB Tutoring" />
-  <meta
-    property="og:description"
-    content="Selective, HSC and IB tutoring delivered by top ranked students. Limited places. Join the waitlist for our next intake."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://abbtutoring.org/" />
-  <meta property="og:image" content="https://abbtutoring.org/og-image.png" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ABB Tutoring Waitlist | Selective, HSC and IB Tutoring" />
-  <meta
-    name="twitter:description"
-    content="Sydney based Selective, HSC and IB tutoring by top ranked students. Places offered first to waitlisted families."
-  />
-  <meta name="twitter:image" content="https://abbtutoring.org/og-image.png" />
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -585,118 +566,150 @@
       font-size: 0.74rem;
     }
 
-    /* Tutors */
+    /* Tutors - featured on home */
 
     .tutors-section {
       border-top: 1px solid #d4d4d4;
       padding-top: 56px;
     }
 
-    .tutor-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    .tutor-grid-featured {
+      display: grid;
+      gap: 28px;
+      margin-top: 32px;
     }
 
-    .tutor-row {
-      border-radius: var(--radius-xl);
+    .tutor-card-featured {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 2.3fr);
+      gap: 20px;
       background: var(--bg-card);
+      padding: 22px;
+      border-radius: var(--radius-xl);
       border: 1px solid var(--border);
       box-shadow: var(--shadow-soft);
-      padding: 14px 18px;
-      display: flex;
-      align-items: flex-start;
-      gap: 18px;
     }
 
-    .tutor-avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: 999px;
-      background-image: var(--accent-gradient);
-      color: #ffffff;
+    .tutor-featured-photo {
+      border-radius: 18px;
+      background: radial-gradient(circle at top left, rgba(142, 74, 209, 0.16), rgba(232, 83, 99, 0.16));
+      border: 1px dashed var(--accent-border);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
-      font-size: 1rem;
-      flex-shrink: 0;
-      overflow: hidden;
-      border: 0;
+      flex-direction: column;
+      gap: 8px;
+      padding: 14px;
+      text-align: center;
     }
 
-    .tutor-main {
-      flex: 1;
-      min-width: 0;
+    .tutor-photo-page-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .tutor-photo-page-inner {
+        width: 100%;
+        max-width: 200px;
+        aspect-ratio: 4 / 5;
+        border-radius: 16px;
+        background: #e5e7eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: #4b5563;
+        overflow: hidden;
+    }
+
+    .tutor-photo-caption {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    .tutor-featured-content {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 8px;
     }
 
-    .tutor-header-line {
+    .tutor-featured-header-line {
       display: flex;
       justify-content: space-between;
-      gap: 12px;
       flex-wrap: wrap;
+      gap: 10px;
       align-items: baseline;
     }
 
-    .tutor-name {
-      font-size: 1.02rem;
+    .tutor-featured-name {
+      font-size: 1.35rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
 
-    .tutor-tags {
-      font-size: 0.76rem;
+    .tutor-featured-tags {
+      font-size: 0.86rem;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       color: var(--text-soft);
     }
 
-    .tutor-subjects {
-      font-size: 0.9rem;
+    .tutor-featured-subjects {
+      font-size: 0.96rem;
       font-weight: 600;
       color: var(--accent-strong);
     }
 
-    .tutor-achievements-label {
+    .tutor-featured-quote {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .tutor-featured-list-label {
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
       color: var(--text-soft);
-      margin-top: 4px;
+      margin-top: 6px;
     }
 
-    .tutor-achievements {
-      margin-top: 4px;
-      font-size: 0.88rem;
-      color: var(--text-main);
+    .tutor-featured-list {
       list-style: none;
+      margin-top: 6px;
+      font-size: 0.9rem;
+      color: var(--text-main);
       display: grid;
-      gap: 2px;
+      gap: 4px;
     }
 
-    .tutor-achievements li {
+    .tutor-featured-cta-row {
       display: flex;
-      gap: 8px;
-      align-items: flex-start;
-    }
-
-    .tutor-bullet {
-      width: 4px;
-      height: 4px;
-      border-radius: 999px;
-      background: #9ca3af;
-      margin-top: 7px;
-      flex-shrink: 0;
-    }
-
-    .tutor-note {
-      font-size: 0.78rem;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
       color: var(--text-soft);
-      margin-top: 4px;
+    }
+
+    .tutor-featured-note {
+      max-width: 260px;
+    }
+
+    .tutor-featured-cta {
+      align-self: flex-start;
+    }
+
+    .tutor-section-footnote {
+      margin-top: 18px;
+      font-size: 0.8rem;
+      color: var(--text-soft);
     }
 
     /* Consultation */
@@ -866,6 +879,14 @@
       .consult-grid {
         grid-template-columns: minmax(0, 1fr);
       }
+
+      .tutor-card-featured {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .tutor-featured-photo-inner {
+        max-width: 180px;
+      }
     }
 
     @media (max-width: 780px) {
@@ -900,10 +921,6 @@
       .hero-heading {
         font-size: 2.2rem;
       }
-
-      .tutor-row {
-        padding: 14px 14px;
-      }
     }
 
     @media (max-width: 560px) {
@@ -913,16 +930,6 @@
 
       .form-row {
         grid-template-columns: minmax(0, 1fr);
-      }
-
-      .tutor-row {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .tutor-header-line {
-        flex-direction: column;
-        align-items: flex-start;
       }
 
       .hero-stat-grid {
@@ -950,7 +957,7 @@
 
       <nav>
         <div class="nav-links">
-          <a href="#tutors">Tutors</a>
+          <a href="tutors.html">Tutors</a>
           <a href="programs.html">Programs</a>
         </div>
         <div class="nav-cta">
@@ -967,21 +974,21 @@
         <div>
           <div class="hero-eyebrow">
             <span class="pill-dot"></span>
-            2025 intake · waitlist only
+            2026 intake · waitlist only
           </div>
           <h1 id="hero-heading" class="hero-heading">
-            High performance tutoring
+            Top ranked tutors
             <span class="hero-gradient-text">for a small first cohort.</span>
           </h1>
           <p class="hero-subtitle">
-            Our tutors are currently overseas and at full capacity.  
+            Our tutors are currently overseas or at capacity.  
             We are opening a small intake for the next term.  
-            Families on the waitlist are contacted first when lesson times become available.
+            Families on the waitlist are contacted first when a tutor has room.
           </p>
 
           <div class="hero-cta-row">
             <a href="#consult" class="btn btn-primary">Join waitlist</a>
-            <a href="#tutors" class="btn btn-ghost">View tutors</a>
+            <a href="#tutors" class="btn btn-ghost">View  tutors</a>
           </div>
 
           <div class="hero-meta">
@@ -991,8 +998,8 @@
             </div>
             <div class="hero-meta-dot"></div>
             <div class="hero-meta-chip">
-              <span>Small cohort</span>
-              Priority for early families
+              <span>Small first cohort</span>
+              Placement by application and fit
             </div>
           </div>
         </div>
@@ -1030,212 +1037,171 @@
                 <div class="avatar-circle">EJ</div>
                 <div class="avatar-circle">SW</div>
               </div>
-            <div class="hero-avatar-caption">
-              Tutors from top selective and independent schools.
+              <div class="hero-avatar-caption">
+                Tutors from top selective and independent schools with a limited number of students each.
+              </div>
+            </div>
+            <div>
+              Outcomes based on recent cohorts and a small group of students per tutor.
             </div>
           </div>
-          <div>
-            Outcomes based on recent cohorts and a small group of students.
-          </div>
-        </div>
-      </aside>
-    </div>
-  </section>
+        </aside>
+      </div>
+    </section>
 
-    <!-- Tutors -->
-    <!-- your tutors section unchanged from before -->
-    <!-- I keep the exact content you already had, only copied here again -->
-
+    <!-- Hero tutors -->
     <section id="tutors" class="tutors-section" aria-labelledby="tutors-heading">
       <div class="section-header-row">
         <div>
-          <h2 id="tutors-heading" class="section-heading">Meet the tutors</h2>
+          <h2 id="tutors-heading" class="section-heading">Meet the Tutors</h2>
           <p class="section-subtitle">
-            All tutors teach from their own exam results. Clear ranks, clear subjects, no generic profiles.
+            These tutors set the standard for ABB Tutoring.  
+            Each one teaches from a personal record at the very top of their program.
           </p>
         </div>
         <div>
-          <a href="#consult" class="btn btn-primary">Secure a place</a>
+          <a href="tutors.html" class="btn btn-ghost">View full tutor team</a>
         </div>
       </div>
 
-      <div class="tutor-list">
+      <div class="tutor-grid-featured">
         <!-- Alex Xu -->
-        <article class="tutor-row">
-          <div class="tutor-avatar">AX</div>
-          <div class="tutor-main">
-            <div class="tutor-header-line">
-              <div class="tutor-name">Alex Xu</div>
-              <div class="tutor-tags">IB specialist · biology and english</div>
+        <article class="tutor-card-featured">
+          <div class="tutor-featured-photo">
+            <div class="tutor-featured-photo-inner">
+            <img src="image.png" alt="Eamon Jia" class="tutor-photo-page-img" />
             </div>
-            <div class="tutor-subjects">
+          </div>
+          <div class="tutor-featured-content">
+            <div class="tutor-featured-header-line">
+              <h3 class="tutor-featured-name">Alex X.</h3>
+              <div class="tutor-featured-tags">IB specialist · biology · english</div>
+            </div>
+            <div class="tutor-featured-subjects">
               Teaches: IB Biology HL · IB English Literature HL
             </div>
-            <div class="tutor-achievements-label">Key achievements</div>
-            <ul class="tutor-achievements">
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>IB predicted 45.</div>
-              </li>
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Ranked first in English Literature HL, Biology HL, Geography SL and Physics SL at school.</div>
-              </li>
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Selected for Australian Biology Olympiad Summer School, top twenty four students in Australia.</div>
-              </li>
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Research experience in gait analysis for early dementia detection.</div>
-              </li>
+            <div class="tutor-featured-quote">
+              “My goal is to give students a clear plan that turns panic into predictable marks.”
+            </div>
+
+            <div class="tutor-featured-list-label">Selected achievements</div>
+            <ul class="tutor-featured-list">
+              <li>IB predicted 45 (7 in every subject).</li>
+              <li>Dux of Cohort 2024/2025</li>
+              <li>Selective Score 260+</li>
+              <li>Full Academic Scholarship to Top Private School</li>
+              <li>Ranked 1st in English Literature HL, Biology HL, Geography SL, Physics SL</li>
+              <li>Selected for ANU Australian Biology Olympiad Summer School, top 24 in Australia.</li>
+              <li>Australian Biology Olympiad Top 24 (High Distinction)</li>
+              <li>Melbourne University National Math Competition Winner 2022/2024</li>
+              <li>Australian Big Science Competition High Distinction 2021/2022/2023/2024</li>
+              <li>Very limited spaces due to commitments in research and competitions.</li>
             </ul>
-            <div class="tutor-note">
-              Best for IB students aiming for six and seven in Biology and English.
+
+            <div class="tutor-featured-cta-row">
+              <a href="#consult" class="btn btn-primary tutor-featured-cta">
+                Join waitlist for Alex
+              </a>
+              <div class="tutor-featured-note">
+                Best for students aiming for high six and seven in Biology and English.
+              </div>
             </div>
           </div>
         </article>
 
         <!-- Eamon Jia -->
-        <article class="tutor-row">
-          <div class="tutor-avatar">EJ</div>
-          <div class="tutor-main">
-            <div class="tutor-header-line">
-              <div class="tutor-name">Eamon Jia</div>
-              <div class="tutor-tags">IB specialist · physics and maths</div>
-            </div>
-            <div class="tutor-subjects">
-              Teaches: IB Physics HL · IB Mathematics AA HL
-            </div>
-            <div class="tutor-achievements-label">Key achievements</div>
-            <ul class="tutor-achievements">
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>IB predicted 45.</div>
-              </li>
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Ranked first in Physics HL and equal first in Mathematics AA HL.</div>
-              </li>
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Invited to National Mathematics High Performance Training Camp.</div>
-              </li>
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Physics Olympiad High Distinction.</div>
-              </li>
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Research on machine learning for misinformation detection.</div>
-              </li>
-            </ul>
-            <div class="tutor-note">
-              Best for IB students in higher level Physics and Maths who want strong paper one and paper two results.
+        <article class="tutor-card-featured">
+          <div class="tutor-featured-photo">
+            <div class="tutor-featured-photo-inner">
+              <img src="eamontutor.jpeg" alt="Eamon Jia" class="tutor-photo-page-img" />
             </div>
           </div>
-        </article>
+          <div class="tutor-featured-content">
+            <div class="tutor-featured-header-line">
+              <h3 class="tutor-featured-name">Eamon J.</h3>
+              <div class="tutor-featured-tags">IB specialist · physics · maths</div>
+            </div>
+            <div class="tutor-featured-subjects">
+              Teaches: IB Physics HL · IB Mathematics AA HL
+            </div>
+            <div class="tutor-featured-quote">
+              “Strong exam results come from method, not guessing. I teach students how to think like markers.”
+            </div>
 
-        <!-- Seb Wong -->
-        <article class="tutor-row">
-          <div class="tutor-avatar">SW</div>
-          <div class="tutor-main">
-            <div class="tutor-header-line">
-              <div class="tutor-name">Seb Wong</div>
-              <div class="tutor-tags">HSC specialist · maths and sciences</div>
-            </div>
-            <div class="tutor-subjects">
-              Teaches: HSC Mathematics Extension One and Two · Physics · Chemistry
-            </div>
-            <div class="tutor-achievements-label">Key achievements</div>
-            <ul class="tutor-achievements">
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>ATAR predicted 99.95.</div>
-              </li>
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Ranked first in Mathematics Extension One, Extension Two, Physics and Chemistry in school assessments.</div>
-              </li>
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Winner of UNSW Integration Bee.</div>
-              </li>
+            <div class="tutor-featured-list-label">Selected achievements</div>
+            <ul class="tutor-featured-list">
+              <li>IB predicted 45 (7 in every subject).</li>
+              <li>Dux of Cohort 2022/2023/2024/2025</li>
+              <li>Selective Score 260+</li>
+              <li>Full Academic Scholarship to Top Private School</li>
+              <li>Ranked 1st in Physics HL, Maths AAHL, Chinese SL, Economics SL</li>
+              <li>Selected for AMOC School of Excellence National Camp.</li>
+              <li>Physics Olympiad High Distinction 2023/2025.</li>
+              <li>AMC NSW first place 2024</li>
+              <li>UNSW Maths Competition 2nd place 2023</li>
+              <li>Spaces each term are capped to keep lesson preparation time high.</li>
             </ul>
-            <div class="tutor-note">
-              Best for senior HSC students targeting high band outcomes in advanced and extension courses.
+
+            <div class="tutor-featured-cta-row">
+              <a href="#consult" class="btn btn-primary tutor-featured-cta">
+                Join waitlist for Eamon
+              </a>
+              <div class="tutor-featured-note">
+                Best for higher level Physics and Maths students who want stable high performance.
+              </div>
             </div>
           </div>
         </article>
 
         <!-- Marcus Ke -->
-        <article class="tutor-row">
-          <div class="tutor-avatar">MK</div>
-          <div class="tutor-main">
-            <div class="tutor-header-line">
-              <div class="tutor-name">Marcus Ke</div>
-              <div class="tutor-tags">IB all rounder · english and humanities</div>
-            </div>
-            <div class="tutor-subjects">
-              Teaches: IB English · Humanities and general academic support
-            </div>
-            <div class="tutor-achievements-label">Key achievements</div>
-            <ul class="tutor-achievements">
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>IB predicted 43.</div>
-              </li>
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Strong IB English performance.</div>
-              </li>
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Equal first in Mathematics AA HL at school.</div>
-              </li>
-            </ul>
-            <div class="tutor-note">
-              Best for students who need steady support in writing, analysis and organisation.
+        <article class="tutor-card-featured">
+          <div class="tutor-featured-photo">
+            <div class="tutor-featured-photo-inner">
+              <img src="marcusKe.png" alt="Eamon Jia" class="tutor-photo-page-img" />
             </div>
           </div>
-        </article>
+          <div class="tutor-featured-content">
+            <div class="tutor-featured-header-line">
+              <h3 class="tutor-featured-name">Marcus K.</h3>
+              <div class="tutor-featured-tags">IB English · Humanities · Maths AA HL</div>
+            </div>
+            <div class="tutor-featured-subjects">
+              Teaches: IB English · Humanities · Maths AA HL
+            </div>
+            <div class="tutor-featured-quote">
+              “I want students to walk into trials feeling that paper style questions are familiar work.”
+            </div>
 
-        <!-- Michael Zhou -->
-        <article class="tutor-row">
-          <div class="tutor-avatar">MZ</div>
-          <div class="tutor-main">
-            <div class="tutor-header-line">
-              <div class="tutor-name">Michael Zhou</div>
-              <div class="tutor-tags">IB core · tok · cas · ee</div>
-            </div>
-            <div class="tutor-subjects">
-              Teaches: TOK · CAS planning and reflections · Extended Essay structure and drafting
-            </div>
-            <div class="tutor-achievements-label">Key strengths</div>
-            <ul class="tutor-achievements">
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Strong working knowledge of IB Core requirements.</div>
-              </li>
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Guides CAS planning, tracking and reflection writing.</div>
-              </li>
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Supports TOK essay and exhibition structure within IB academic honesty rules.</div>
-              </li>
-              <li>
-                <div class="tutor-bullet"></div>
-                <div>Helps students plan and organise the Extended Essay into clear stages.</div>
-              </li>
+            <div class="tutor-featured-list-label">Selected achievements</div>
+            <ul class="tutor-featured-list">
+              <li>IB Predicted 44.</li>
+              <li>Selective Score 260+</li>
+              <li>Full Academic Scholarship to Top Private School</li>
+              <li>Ranked 1st in Maths AAHL and Physics SL.</li>
+              <li>AMC High Distinction/Prize 2021/2022/2023/2024</li>
+              <li>Model United Nations Assembly (MUNA) - Representation for Rotary 0675</li>
+              <li>UN Youth Voice Public Speaking Regional Finalist 2023</li>
+              <li>Ethics Olympiad 5th Internationals 2023</li>
+              <li>Ethics Olympiad 7th Internationals 2022</li>
+              <li>Limited spaces due to heavy demand from year 11 and 12 students.</li>
             </ul>
-            <div class="tutor-note">
-              Best for IB students who feel lost in CAS, TOK or EE and need a simple plan.
+
+            <div class="tutor-featured-cta-row">
+              <a href="#consult" class="btn btn-primary tutor-featured-cta">
+                Join waitlist for Marcus
+              </a>
+              <div class="tutor-featured-note">
+                Well suited to students who need steady support across multiple subjects.
+              </div>
             </div>
           </div>
         </article>
       </div>
+
+      <p class="tutor-section-footnote">
+        All other ABB tutors are held to similar standards.  
+        You can view the complete team on the Tutors page. New places each term are limited by tutor capacity.
+      </p>
     </section>
 
     <!-- Consultation as waitlist -->
@@ -1244,8 +1210,8 @@
         <div>
           <h2 id="consult-heading" class="section-heading">Join the waitlist</h2>
           <p class="section-subtitle">
-            We are holding a limited number of places for our next intake.  
-            Joining the waitlist reserves your spot in the queue.
+            We review new families in the order they join the waitlist.  
+            When a tutor has space, we contact suitable students first.
           </p>
         </div>
       </div>
@@ -1256,7 +1222,7 @@
           <ul class="consult-list">
             <li>
               <span>Step one</span>
-              You share your child’s details, exams and subjects.
+              You share your child’s details, year level and exams.
             </li>
             <li>
               <span>Step two</span>
@@ -1265,11 +1231,12 @@
             <li>
               <span>Step three</span>
               When tutors return and a time opens, we contact waitlisted families in order.
+              For some students we may invite a short placement task so we can match them to the right tutor.
             </li>
           </ul>
           <p class="consult-note">
             Joining the waitlist is free and holds your place.  
-            You can decide on lessons once we contact you with available times.
+            We cannot offer every family a place each term, so we consider exam timing, goals and tutor fit.
           </p>
         </div>
 
@@ -1332,7 +1299,7 @@
 
             <div class="field-group">
               <label for="notes">Any key information</label>
-              <textarea id="notes" name="notes" placeholder="Upcoming exams, current school, main concerns."></textarea>
+              <textarea id="notes" name="notes" placeholder="Upcoming exams, current school, main concerns, preferred tutors."></textarea>
             </div>
 
             <div class="form-actions">
@@ -1352,7 +1319,7 @@
       <div>© <span id="year"></span> ABB Tutoring · Aspire Beyond Boundaries</div>
       <div class="footer-nav">
         <a href="#top">Top</a>
-        <a href="#tutors">Tutors</a>
+        <a href="tutors.html">Tutors</a>
         <a href="programs.html">Programs</a>
         <a href="#consult">Waitlist</a>
       </div>
